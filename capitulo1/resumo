@@ -1,0 +1,39 @@
+Capitulo 1:
+Linguagens back-end paralisam um processamento enquanto estão fazendo um I/O.
+Para solucionar boa parte desse problema em 2009, Ryan Dahl com ajuda de 14 colaboradores criou o Node.js.
+Sua arquitetura é toda feita em non-blocking-thread.
+Node js é altamento escalável e de baixo nivel, o javascript é sua linguagem de programação e tudo isso é possível graças á engine javascript v8, a mesma utilizada no Chrome.
+Toda a aplicação é feita em Single-Therad, mas também é possivel usar multi thread atraves de cluster ou programação assincrona.
+Node.js é orientado a eventos, segue a mesma orientação de eventos do javascript client-side, a unica diferença que não existe eventos do click do mouse, keyup do teclado ou qualquer component html.
+O event-loop é o agente responsavel por escutar e emitir eventos no sistema.
+
+Pacotes de um projeto, podemos criar um package.json para que isso seja possivel.
+
+{
+    "name": "meu-primero-node-app",
+    "description": "Meu primeiro app em Node.js",
+    "author": "Caio R. Pereira <caio@email.com>",
+    "version": "1.2.3",
+    "private": true,
+    "dependencies": {
+        "modulo-1": "1.0.0",
+        "modulo-2": "~1.0.0",
+        "modulo-3": ">=1.0.0"
+    },
+    "devDependencies": {
+        "modulo-4": "*"
+    }
+}
+
+Escopo de variaveis globais:
+em client sides as variaveis globais são feitas da seguinte maneiras:
+window.hoje = new Date();
+alert(window.hoje);
+em node.js
+
+
+global.hoje = new Date();
+console.log(global.hoje);
+
+CommonJs.
+é basicamente boas praticas para codificar em js.
